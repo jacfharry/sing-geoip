@@ -52,7 +52,7 @@ jobs:
         if: steps.build.outputs.skip != 'true'
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.build.outputs.tag }}
+          tag_name: ${{ env.TAG_NAME }}
           files: |
             geoip.db
             geoip.db.sha256sum
